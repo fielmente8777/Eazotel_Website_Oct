@@ -1,5 +1,6 @@
 // Mostly static page sections (converted from the original HTML).
 import { Icon, Photo } from './Icon.jsx'
+import { Logo } from './Header.jsx'
 import { ServiceCols, Industries, Roi, Reviews, PhoneRow } from './Interactive.jsx'
 
 export function ServicesSection() {
@@ -245,7 +246,7 @@ export function Footer() {
         <div className="wrap">
           <div className="foot">
             <div style={{display:'grid',gap:'12px',alignContent:'start'}}>
-              <a className="logo" href="#top" aria-label="Eazotel home" style={{color:'#fff'}}><svg className="wm" width="164" height="29" role="img" aria-label="Eazotel"><use href="#eazLogo"/></svg></a>
+              <Logo onDark />
               <p>AI growth platform for hotels, with marketing by Fielmente.</p>
               <p style={{fontSize:'.82rem'}}>Suncity Success Tower, Sector 65, Gurugram 122005</p>
               <p style={{fontFamily:'var(--mono)',fontSize:'.82rem',userSelect:'all'}}>sachin@fielmente.com</p>

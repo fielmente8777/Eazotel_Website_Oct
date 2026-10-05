@@ -649,3 +649,13 @@ footer .logo{color:#fff}
 @media (max-width:460px){.foot{grid-template-columns:1fr}}
 .wa-float{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:40;background:#1f9d55;color:#fff;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;box-shadow:0 10px 24px -8px rgba(0,0,0,.4)}
 .wa-float svg{width:28px;height:28px}
+
+/* Official wordmark image (replaces the old drawn SVG) */
+.logo img.wm{display:block;width:164px;height:auto;flex:none}
+.logo img.wm-dark{display:none}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]) .logo:not(.on-dark) img.wm-light{display:none}
+  :root:not([data-theme="light"]) .logo:not(.on-dark) img.wm-dark{display:block}
+}
+:root[data-theme="dark"] .logo:not(.on-dark) img.wm-light{display:none}
+:root[data-theme="dark"] .logo:not(.on-dark) img.wm-dark{display:block}

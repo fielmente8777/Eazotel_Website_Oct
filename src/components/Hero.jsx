@@ -117,7 +117,7 @@ export function Flow() {
               })}
             </g>
             <rect x="400" y="120" width="200" height="140" rx="18" fill="url(#g1)" />
-            <svg x="428" y="146" width="144" height="26" style={{ color: '#fff' }}><use href="#eazLogo" /></svg>
+            <image href="/brand/eazotel-logo-white.webp" x="428" y="146" width="144" height="26" />
             <text x="428" y="212" style={{ fill: '#cfe0f5', fontSize: '13px' }}>Unified inbox · CRM</text>
             <text x="428" y="234" style={{ fill: '#cfe0f5', fontSize: '13px' }}>AI agent · Lead scoring</text>
             <g>
