@@ -15,7 +15,7 @@ function Lead({ l }) {
   )
 }
 
-function HeroFloats() {
+export function HeroFloats() {
   const reduce = useReducedMotion()
   // feed holds [seq, leadIndex] so keys stay unique as rows rotate in
   const [feed, setFeed] = useState(() => [3, 2, 1, 0].map(i => [i, i]))
@@ -91,6 +91,22 @@ export function Flow() {
       <div className="wrap">
         <div className="head center"><span className="eyebrow">Why Eazotel</span><h2>Scattered leads in. Direct bookings out.</h2></div>
         <div className="flow-wrap">
+          <FlowDiagram />
+        </div>
+        <div className="leaks">
+          <div className="leak"><Icon n="megaphone-off" />Meta leads lost in Ads Manager</div>
+          <div className="leak"><Icon n="smartphone" />WhatsApp chats on personal phones</div>
+          <div className="leak"><Icon n="moon" />Night enquiries unanswered</div>
+          <div className="leak"><Icon n="alarm-clock-off" />No follow-up, leads go cold</div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+/** Channels → Eazotel inbox → outcomes, with animated pulses on the wires. */
+export function FlowDiagram() {
+  return (
           <svg className="flow" viewBox="0 0 1000 380" role="img" aria-label="Diagram: six channels flow into the Eazotel inbox, which leads to AI reply, follow-up and a direct booking">
             <defs><linearGradient id="g1" x1="0" x2="1"><stop offset="0" stopColor="#093A75" /><stop offset="1" stopColor="#1b5aa6" /></linearGradient></defs>
             <g>
@@ -134,14 +150,5 @@ export function Flow() {
               })}
             </g>
           </svg>
-        </div>
-        <div className="leaks">
-          <div className="leak"><Icon n="megaphone-off" />Meta leads lost in Ads Manager</div>
-          <div className="leak"><Icon n="smartphone" />WhatsApp chats on personal phones</div>
-          <div className="leak"><Icon n="moon" />Night enquiries unanswered</div>
-          <div className="leak"><Icon n="alarm-clock-off" />No follow-up, leads go cold</div>
-        </div>
-      </div>
-    </section>
   )
 }
